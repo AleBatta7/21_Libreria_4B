@@ -1,0 +1,13 @@
+eccezioni\EccezionePosizioneOccupata.class
+utilita\TextFile.class
+com\mycompany\_libreria_4b\Mensola.class
+utilita\Menu.class
+com\mycompany\_libreria_4b\Libro.class
+com\mycompany\_libreria_4b\App.class
+com\mycompany\_libreria_4b\Scaffale.class
+utilita\ConsoleInput.class
+eccezioni\FileException.class
+eccezioni\EccezionePosizioneVuota.class
+eccezioni\EccezioneRipianoNonValido.class
+utilita\Ordinatore.class
+eccezioni\EccezionePosizioneNonValida.class
