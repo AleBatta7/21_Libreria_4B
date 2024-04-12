@@ -5,7 +5,10 @@
 package com.mycompany._libreria_4b;
 
 import eccezioni.*;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import utilita.ConsoleInput;
@@ -20,7 +23,7 @@ public class App {
 
     public static void main(String[] args) 
     {
-        int numeroVociMenu=9;
+        int numeroVociMenu=11;
         String[] vociMenu=new String[numeroVociMenu];
         int voceMenuScelta;
         Menu menu;
@@ -33,6 +36,7 @@ public class App {
         Libro[] elencoLibriOrdinatiAlfabeticamente;
         String [] elencoTitoliAutore = null;
         String nomeFileCSV="volumi.csv";
+        String nomeFileBinario="scaffale.bin";
         TextFile file = null;
         
         vociMenu[0]="0 -->\tEsci";
@@ -44,6 +48,8 @@ public class App {
         vociMenu[6]="6 -->\tMostra elenco dei volumi presenti ordinato alfabeticamente per titolo";
         vociMenu[7]="7 -->\tEsporta volumi in formato CSV";
         vociMenu[8]="8 -->\tImporta volumi da file CSV";
+        vociMenu[9]="9 -->\tsalva dati da scaffale";
+        vociMenu[10]="10 -->\tcarica dati scaffale";
         
         menu=new Menu(vociMenu);
         
@@ -313,6 +319,29 @@ public class App {
                     
                     
                     break;
+                    
+                case 9:         //serializzazione
+                {
+                    try 
+                    {
+                        ObjectOutputStream writer=new ObjectOutputStream(new FileOutputStream(nomeFileBinario));
+                        writer.writeObject(s1);
+                        writer.flush();
+                        writer.close();
+                    }
+                    catch (FileNotFoundException ex) 
+                    {
+                        System.out.println("file non trovato");
+                    } 
+                    catch (IOException ex) 
+                    {
+                        System.out.println("impossibile accedere al file ");
+                    }
+                    
+                }
+                    
+                    break;
+
 
 
                     

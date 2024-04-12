@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.mycompany._libreria_4b;
+import java.io.Serializable;
 
 /**
  * Rappresenta un libro
@@ -10,7 +11,7 @@ package com.mycompany._libreria_4b;
  * COSTO FISSO rappresenta il costo fisso pre realizzare una copia del libro.
  * @author gian
  */
-public class Libro 
+public class Libro implements Serializable
 {
     private String titolo;
     private String autore;

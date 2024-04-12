@@ -5,14 +5,16 @@
 package com.mycompany._libreria_4b;
 
 import eccezioni.*;
+import java.io.Serializable;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.io.Serializable;
 
 /**
  *
  * @author gian
  */
-public class Mensola 
+public class Mensola implements Serializable
 {
     private final static int NUM_MAX_VOLUMI=15;
     private Libro[] volumi; 
